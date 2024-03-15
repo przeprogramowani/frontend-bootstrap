@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest';
 import { getTopCharacters } from './CharactersProcessor';
-import { Character } from '../types';
+import { Character } from '../../lib/rick-and-morty-api-client';
 
 const characters: Character[] = [
   {
@@ -21,7 +21,7 @@ const characters: Character[] = [
     image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
     episode: ['https://rickandmortyapi.com/api/episode/1'],
     url: 'https://rickandmortyapi.com/api/character/1',
-    created: '2017-11-04T18:48:46.250Z',
+    created: new Date('2017-11-04T18:48:46.250Z'),
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const characters: Character[] = [
     image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
     episode: ['https://rickandmortyapi.com/api/episode/1'],
     url: 'https://rickandmortyapi.com/api/character/2',
-    created: '2017-11-04T18:50:21.651Z',
+    created: new Date('2017-11-04T18:50:21.651Z'),
   },
 ];
 

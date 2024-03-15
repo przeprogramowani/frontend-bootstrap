@@ -1,0 +1,10 @@
+apis/DefaultApi.ts
+apis/index.ts
+index.ts
+models/Character.ts
+models/CharacterLocation.ts
+models/CharacterOrigin.ts
+models/FetchAllCharacters200Response.ts
+models/FetchAllCharacters200ResponseInfo.ts
+models/index.ts
+runtime.ts
