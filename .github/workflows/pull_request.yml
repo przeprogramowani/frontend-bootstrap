@@ -2,14 +2,10 @@ name: Pull Request Workflow
 
 on:
   pull_request:
-    branches:
-      - main
-      - master
 
 jobs:
   verify-pr:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
