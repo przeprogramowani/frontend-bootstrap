@@ -1,0 +1,23 @@
+name: Sync directory with S3 bucket
+description: Composite action to configure AWS and deploy app bundle to S3
+
+inputs:
+  bucket-name:
+    description: 'S3 bucket name'
+    required: true
+  bundle-dir:
+    description: 'Bundle directory'
+    required: false
+    default: 'dist'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4.0.2
+      with:
+        aws-region: 'eu-central-1'
+
+    - name: Sync S3 bucket
+      run: aws s3 sync ${{ inputs.bundle-dir }} s3://${{ inputs.bucket-name }}
+      shell: bash
