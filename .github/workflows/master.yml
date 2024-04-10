@@ -28,3 +28,12 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      # - name: Deploy to S3
+      #   uses: ./.github/actions/aws-s3-sync
+      #   with:
+      #     bucket-name: '[BUCKET_NAME]'
+      #     bundle-dir: '[BUNDLE_DIRECTORY]'
+      #   env:
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
